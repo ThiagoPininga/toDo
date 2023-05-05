@@ -1,7 +1,7 @@
 <?php
 $hostname = 'aws.connect.psdb.cloud';
-$usuario = 'jz3m6t6mxpkrc0lnah2a';
-$senha = 'pscale_pw_5EKsV46BYllAwanuzgzCQSZXal6WcNQqfvquvsZxuJy';
+$usuario = 'gh99poep9v5zbykumqnb';
+$senha = 'pscale_pw_WplVoDJcKskOuKMnTKzvPc2Oj6aAWDZaskdKUY9kZM2';
 $database = 'todo';
 
 $mysqli = new mysqli($hostname, $usuario, $senha, $database);
