@@ -17,11 +17,11 @@
 //     echo 'Falha ao conectar: ('.$mysqli->connect_errno . ') ' . $mysqli -> connect_errno;
 // }
 
-$servername = "aws.connect.psd.sao1.pscale.io";
-$username = "cohnnln8du69baxx";
-$password = "pscale_pw_3RwVr4I1It4fX28e7mRGcQyz";
+$HOST="aws.connect.psdb.cloud";
+$USERNAME="a2307nrjr2w8ir4e6av4";
+$PASSWORD="pscale_pw_riR51gdEUBYgFNwHiaeCeOW7GsabcsehBIlatcjEDwt";
+$DATABASE="todo";
 
-// Criando a conexão com SSL/TLS
   $mysqli = mysqli_init();
   $mysqli->ssl_set(NULL, NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
   $mysqli->real_connect($servername, $username, $password, 'todo');
