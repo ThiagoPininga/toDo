@@ -23,7 +23,7 @@ $password = "pscale_pw_3RwVr4I1It4fX28e7mRGcQyz";
 
 // Criando a conexão com SSL/TLS
 $conn = mysqli_init();
-mysqli_ssl_set($conn,NULL,NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
+mysqli_ssl_set($conn,NULL,NULL, "/etc/pki/tls/certs/ca-bundle.crt", NULL, NULL);
 mysqli_real_connect($conn, $servername, $username, $password, "todo", 3306, NULL, MYSQLI_CLIENT_SSL);
 
 // Checando a conexão
