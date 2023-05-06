@@ -24,7 +24,7 @@ $DATABASE="todo";
 
   $mysqli = mysqli_init();
   $mysqli->ssl_set(NULL, NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
-  $mysqli->real_connect($HOST, $USERNAME, $PASSWORD, 'todo');
+  $mysqli->real_connect($HOST, $USERNAME, $PASSWORD, $DATABASE);
   $mysqli->close();
 
 // Checando a conexão
