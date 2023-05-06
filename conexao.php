@@ -23,7 +23,9 @@ $password = "pscale_pw_3RwVrjshyRFTTEuKCglbQopvNYBQIznPw1QnNJkdqjh";
 $dbname = "todo";
 
 // Criando a conexão
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_init();
+mysqli_ssl_set($conn,NULL,NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
+mysqli_real_connect($conn, $servername, $username, $password, "todo", 3306, NULL, MYSQLI_CLIENT_SSL);
 
 // Checando a conexão
 if (!$conn) {
