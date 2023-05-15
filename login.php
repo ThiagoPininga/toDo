@@ -20,11 +20,11 @@ if (isset($_POST['email']) ) {
     $user = $sqlSelectLogin->fetch_assoc();
     if ($user != NULL) {
        if (password_verify($senha, $user['senha'])) {
-        if (!isset($_SESSION)) {
+        
             session_start();
             $_SESSION['usuario'] = $user['idCliente'];
             header("Location: index.php");
-        }
+        
         } else{
             $erro = true;
         }
