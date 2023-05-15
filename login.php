@@ -1,11 +1,14 @@
 <?php
-include("conexao.php");
-
-session_start();
+ob_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $erro = false;
 
 if (isset($_POST['email'])) {
+    include("conexao.php");
+
     function limparVar($var)
     {
         return trim($var);
@@ -23,7 +26,7 @@ if (isset($_POST['email'])) {
         if (password_verify($senha, $user['senha'])) {
             $_SESSION['usuario'] = $user['idCliente'];
             header("Location: index.php");
-            exit(); // Certifique-se de sair após redirecionar
+            exit();
         } else {
             $erro = true;
         }
@@ -31,6 +34,7 @@ if (isset($_POST['email'])) {
         $erro = true;
     }
 }
+ob_end_flush();
 ?>
 <!DOCTYPE html>
 <html lang="en">
