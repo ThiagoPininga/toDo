@@ -164,6 +164,12 @@ text-decoration: underline;
 
 /* Forms fim */
 
+/* Paragrafo Inicial inicio */
+.inicio{
+    font-size: 20px;
+}
+/* Paragrafo Inicial fim */
+
 /* Lista inicio */
 .lista{
     width: 80%;
