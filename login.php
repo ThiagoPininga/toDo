@@ -3,6 +3,10 @@ $erro = false;
 if (isset($_POST['email']) ) {
     include("conexao.php");
 
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+
     function limparVar($var)
     {
         return trim($var);
@@ -20,8 +24,7 @@ if (isset($_POST['email']) ) {
     $user = $sqlSelectLogin->fetch_assoc();
     if ($user != NULL) {
        if (password_verify($senha, $user['senha'])) {
-        
-            session_start();
+       
             $_SESSION['usuario'] = $user['idCliente'];
             header("Location: index.php");
         
