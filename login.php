@@ -1,18 +1,16 @@
-<?php 
+<?php
 include("conexao.php");
+
 session_start();
 
 $erro = false;
 
-if (isset($_POST['email']) ) {
-   
-
+if (isset($_POST['email'])) {
     function limparVar($var)
     {
         return trim($var);
     }
 
-    $erro = false;
     $email = $_POST["email"];
     $senha = limparVar($_POST["senha"]);
 
@@ -20,21 +18,18 @@ if (isset($_POST['email']) ) {
 
     $sqlSelectLogin = $mysqli->query($selectLogin) or die($mysqli->error);
 
-  
     $user = $sqlSelectLogin->fetch_assoc();
     if ($user != NULL) {
-       if (password_verify($senha, $user['senha'])) {
-    
+        if (password_verify($senha, $user['senha'])) {
             $_SESSION['usuario'] = $user['idCliente'];
-
             header("Location: index.php");
-            exit();
-        } else{
+            exit(); // Certifique-se de sair após redirecionar
+        } else {
             $erro = true;
         }
-    }else{
+    } else {
         $erro = true;
-    }    
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -73,8 +68,7 @@ if (isset($_POST['email']) ) {
 
                 <?php
                 if ($erro) {
-                    echo "<span class='erro'>Email ou senha incorretos</span>
-                    ";
+                    echo "<span class='erro'>Email ou senha incorretos</span>";
                 }
                 ?>
 
