@@ -294,7 +294,7 @@ text-decoration: underline;
 /* InputModificar fim */
 
 /* Media inicio */
-@media (max-width:405px) {
+@media (max-width:408px) {
     .logo{
         font-size: 40px;
     }
