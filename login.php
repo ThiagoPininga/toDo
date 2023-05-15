@@ -1,11 +1,10 @@
 <?php
+session_start();
+
 $erro = false;
+
 if (isset($_POST['email']) ) {
     include("conexao.php");
-
-    if (!isset($_SESSION)) {
-        session_start();
-    }
 
     function limparVar($var)
     {
