@@ -23,10 +23,11 @@ if (isset($_POST['email']) ) {
     $user = $sqlSelectLogin->fetch_assoc();
     if ($user != NULL) {
        if (password_verify($senha, $user['senha'])) {
-       
+    
             $_SESSION['usuario'] = $user['idCliente'];
+
             header("Location: index.php");
-        
+            exit();
         } else{
             $erro = true;
         }
