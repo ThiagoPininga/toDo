@@ -234,7 +234,7 @@ text-decoration: underline;
 .botaoAdicionar{
     position:fixed;
     right:9%;
-    top: 145px;
+    top: 160px;
     padding: 0 10px;
     background-color: rgba(0,0,0,.5);
     border: none;
