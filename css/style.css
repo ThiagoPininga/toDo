@@ -167,7 +167,7 @@ text-decoration: underline;
 /* Paragrafo Inicial inicio */
 .inicio{
     font-size: 20px;
-    margin:20px 0 ;
+    margin:20px 10px;
 }
 /* Paragrafo Inicial fim */
 
@@ -318,6 +318,10 @@ text-decoration: underline;
         padding: 5px 0 5px 10px ;
 
         font-size: 25px;
+    }
+
+    .botaoAdicionar{
+        top: 195px;
     }
 }
 /* Media fim */
