@@ -38,7 +38,7 @@ $sqlSelectLista =$mysqli->query($selectLista) or die($mysqli->error);
 
     <!-- Inicio main -->
     <main>
-        
+        <p>Sua lista de afazeres PRÁTICO e SIMPLES</p>
         <div class="lista">
             <a href="adicionar.php?id=<?php echo $_SESSION['usuario']?>" class="botaoAdicionar">+</a>
 
