@@ -167,12 +167,13 @@ text-decoration: underline;
 /* Paragrafo Inicial inicio */
 .inicio{
     font-size: 20px;
+    margin:20px 0 ;
 }
 /* Paragrafo Inicial fim */
 
 /* Div Inicio inicio */
 .divInicio{
-    margin: 20 0;
+    margin: 20px 0;
 }
 /* Div Inicio fim */
 
