@@ -294,6 +294,33 @@ text-decoration: underline;
 /* InputModificar fim */
 
 /* Media inicio */
+@media (max-width: 500px) {
+    .logo{
+        font-size: 40px;
+    }
+
+    .form{
+        width: 80%;
+        margin: 0 5%;
+    }
+    
+    .formEsqueceuSenha{
+        width: 80%;
+        margin: 0 5%;
+    }
+
+    .listaAdicionar{
+        width: 80%;
+        margin: 0 5%;
+    }
+
+    input{
+        padding: 5px 0 5px 10px ;
+
+        font-size: 25px;
+    }
+}
+
 @media (max-width:408px) {
     .logo{
         font-size: 40px;
