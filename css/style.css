@@ -179,9 +179,9 @@ text-decoration: underline;
 
 /* Lista inicio */
 .lista{
-    width: 80%;
+    width: 60%;
     
-    margin: 40px 8%;
+    margin: 40px auto;
     padding: 40px 2%;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0,0,0,.5);
@@ -232,7 +232,7 @@ text-decoration: underline;
 
 /* Botão Adicionar inicio */
 .botaoAdicionar{
-    position:fixed;
+    position:absolute;
     right:9%;
     top: 183px;
     padding: 0 10px;

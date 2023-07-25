@@ -30,7 +30,9 @@ $sqlSelectLista =$mysqli->query($selectLista) or die($mysqli->error);
 <body>
      <!-- Inicio header -->
      <header>
-        <h1 class="logo">To Do List</h1>
+        <a href="login.php">
+            <h1 class="logo">To Do List</h1>
+        </a>
 
         <a href="logOut.php">Log Out</a>
     </header>
@@ -52,9 +54,11 @@ $sqlSelectLista =$mysqli->query($selectLista) or die($mysqli->error);
                 <div class="item">
                     <table>
                         <td><?php echo $user['comentario']?></td>
-                        <a href="excluir.php?id=<?php echo $user['idItem'];
-                        ?>"><ion-icon name="trash-bin-sharp"></ion-icon></a>
-                        <a href="editar.php?id=<?php echo $user['idItem'];?>"><ion-icon name="pencil-outline"></ion-icon></a>
+                        <div class="botoes">
+                            <a href="excluir.php?id=<?php echo $user['idItem'];?>"><ion-icon name="trash-bin-sharp"></ion-icon></a>
+                            <a href="editar.php?id=<?php echo $user['idItem'];?>"><ion-icon name="pencil-outline"></ion-icon></a>
+                         </div>
+                      
                     </table>
                 </div>
                 <?php

@@ -49,7 +49,7 @@ ob_end_flush();
 <body>
     <!-- Inicio header -->
     <header>
-        <h1 class="logo">To Do List</h1>
+        <h1 class="logo">To Do List</h1>       
     </header>
     <!-- Fim header -->
 
