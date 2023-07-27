@@ -26,7 +26,7 @@ if (count($_POST) > 0 ) {
 <body>
      <!-- Inicio header -->
      <header>
-        <a href="login.php">
+        <a href="index.php">
             <h1 class="logo">To Do List</h1>
         </a>
 

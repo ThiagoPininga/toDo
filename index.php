@@ -30,7 +30,7 @@ $sqlSelectLista =$mysqli->query($selectLista) or die($mysqli->error);
 <body>
      <!-- Inicio header -->
      <header>
-        <a href="login.php">
+        <a href="index.php">
             <h1 class="logo">To Do List</h1>
         </a>
 
@@ -44,8 +44,9 @@ $sqlSelectLista =$mysqli->query($selectLista) or die($mysqli->error);
              <p class="inicio">Sua lista de afazeres PRÁTICO e SIMPLES</p>
         </div>
         <div class="lista">
-            <a href="adicionar.php?id=<?php echo $_SESSION['usuario']?>" class="botaoAdicionar">+</a>
-
+            <div class="adicionarDiv">
+                <a href="adicionar.php?id=<?php echo $_SESSION['usuario']?>" class="botaoAdicionar">+</a>
+            </div>
             <?php
                 while ($user = $sqlSelectLista->fetch_array()) {
                     $comentario = $user['comentario'];
